@@ -1,0 +1,37 @@
+# --- 1. Python & Virtual Environments ---
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# --- 2. Testing & Linting Caches ---
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- 3. Router Credentials & Secrets (Never push passwords!) ---
+.env
+*.env
+*secret*
+*credentials*
+
+# --- 4. Virtual Testbed Images & Runtime State (GNS3 / Containerlab) ---
+# (Keep heavy router OS images backed up in Google Drive instead)
+*.qcow2
+*.bin
+*.image
+*.vmdk
+*.iso
+clab-*/
+
+# --- 5. Editor & OS Clutter (Windows / Linux) ---
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

@@ -1,0 +1,17 @@
+hostname {{hostname}}
+!
+{% if vlans %}
+{% for vlan in vlans %}
+vlan {{vlan.id}}
+ name {{vlan.name}}
+{% endfor %}
+{% endif %}
+!
+{% if ospf %}
+router ospf {{ospf.process_id}}
+router-id {{ospf.router_id}}
+{% for net in ospf.networks %}
+ network {{net.ip}} {{net.wildcard}} area {{net.area}}
+{% endfor %}
+{% endif %}
+end
